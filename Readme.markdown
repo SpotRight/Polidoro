@@ -42,7 +42,7 @@ created using the '\' operator.
 Composite constructs are supported at the key and columnname level
 
     import CompositeFactory.CF
-    val col = scfUsers \ "Ripple" (CF("Lanny", "state"), "TX")
+    val col = scfUsers \ "Ripple" \ (CF("Lanny", "state"), "TX")
 
 Once you have enough of a column path to operate on you can call
 various methods to get, list, or mutate.  Getting a value (returning
