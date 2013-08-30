@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>polidoro - Polidoro 1.0.0 API - com.spotright.polidoro</title>
+          <meta name="description" content="polidoro - Polidoro 1.0.0 API - com.spotright.polidoro" />
+          <meta name="keywords" content="polidoro Polidoro 1.0.0 API com.spotright.polidoro" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'com.spotright.polidoro.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../../../lib/package_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="com">com</a>.<a href="../package.html" class="extype" name="com.spotright">spotright</a></p>
+        <h1>polidoro</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">polidoro</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Polidoro, the (not so evil) twin brother of Cassandra.</p><p>Polidoro is a light sugar over Astyanax using much the same model as
+<a href="https://github.com/shorrockin/cascal/wiki/" target="_blank">Chris Shorrockin's Cascal</a>
+with slight changes where required.</p><p>The primary goal is to provide the simple insert, delete, list and get operations
+from Cascal.  For anything more complex you can use Astyanax directly.</p><p>The column family model supported by Polidoro breaks down as below.</p><h4>ColFam</h4><p>Holds the keyspace and column family name.</p><h4>RowPath</h4><p>Adds a rowkey onto the ColFam.  Supports the <code>list</code> call to slice over the row.</p><h4>ColumnPath</h4><p>Targets a specific column by name.  Supports the <code>get</code> call to optionally return
+the column.  Also supports <span class="extype" name="com.netflix.astyanax.ColumnMutation">com.netflix.astyanax.ColumnMutation</span> calls (although
+see Operations below for batch support).</p><h4>Column</h4><p>Assigns a value to a ColumnPath.</p><h4>Composites</h4><p>A <a href="model/CompositeFactory$.html" class="extype" name="com.spotright.polidoro.model.CompositeFactory">com.spotright.polidoro.model.CompositeFactory</a> is available to make creating Composites easier.</p><h4>Operations</h4><p>An <a href="model/Operation.html" class="extype" name="com.spotright.polidoro.model.Operation">com.spotright.polidoro.model.Operation</a> is either an <a href="model/Insert.html" class="extype" name="com.spotright.polidoro.model.Insert">com.spotright.polidoro.model.Insert</a>,
+<a href="model/IncrCounter.html" class="extype" name="com.spotright.polidoro.model.IncrCounter">com.spotright.polidoro.model.IncrCounter</a>,
+<a href="model/Delete.html" class="extype" name="com.spotright.polidoro.model.Delete">com.spotright.polidoro.model.Delete</a>, or a <a href="model/RowDelete.html" class="extype" name="com.spotright.polidoro.model.RowDelete">com.spotright.polidoro.model.RowDelete</a>.
+Operations can be consumed by the <code>bunch</code> or <code>batch</code> methods in the <span class="extype" name="com.spotright.polidoro.SpotAsty">com.spotright.polidoro.SpotAsty</span>
+object.</p><h4>Predicates</h4><p>The <a href="model/ColumnPredicate.html" class="extype" name="com.spotright.polidoro.model.ColumnPredicate">com.spotright.polidoro.model.ColumnPredicate</a>, <a href="model/RangePredicate.html" class="extype" name="com.spotright.polidoro.model.RangePredicate">com.spotright.polidoro.model.RangePredicate</a>,
+and <a href="model/PrefixPredicate$.html" class="extype" name="com.spotright.polidoro.model.PrefixPredicate">com.spotright.polidoro.model.PrefixPredicate</a> concepts are supported.  Additional sugar has been
+provided to make these structures easier to work with.  E.g.,</p><pre><span class="kw">val</span> maybeCol = (cfOutlets \ url) list <span class="std">List</span>(<span class="lit">"a"</span>, <span class="lit">"b"</span>, <span class="lit">"c"</span>)
+
+<span class="kw">val</span> rangeCols = (cfOutlets \ url) list (<span class="lit">"a"</span>, <span class="lit">"z"</span>.incr)</pre><h3>Testing</h3><p>The SpotAsty object supports the <code>specTestInit</code> call for testing which loads an embedded cassandra
+server.  A <span class="extype" name="com.spotright.polidoro.AstyanaxTestPool">com.spotright.polidoro.AstyanaxTestPool</span> trait is available as a template to embedding
+the daemon in tests that use specs2.
+</p></div><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="com.spotright.polidoro"><span>polidoro</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show all</span></li>
+            </ol>
+            <a href="http://docs.scala-lang.org/overviews/scaladoc/usage.html#members" target="_blank">Learn more about member selection</a>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="com.spotright.polidoro.package#SerDes" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SerDes:com.spotright.polidoro.serialization.SerDes.type"></a>
+      <a id="SerDes:polidoro.serialization.SerDes.type"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">SerDes</span><span class="result">: <a href="serialization/SerDes$.html" class="extype" name="com.spotright.polidoro.serialization.SerDes">polidoro.serialization.SerDes</a>.type</span>
+      </span>
+      </h4>
+      
+    </li><li name="com.spotright.polidoro.model" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="model"></a>
+      <a id="model:model"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="model/package.html"><span class="name">model</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Model of Cassandra Column Families, Predicates, and Operations.</p>
+    </li><li name="com.spotright.polidoro.modelish" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="modelish"></a>
+      <a id="modelish:modelish"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="modelish/package.html"><span class="name">modelish</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.spotright.polidoro.serialization" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="serialization"></a>
+      <a id="serialization:serialization"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="serialization/package.html"><span class="name">serialization</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.spotright.polidoro.session" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="session"></a>
+      <a id="session:session"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="session/package.html"><span class="name">session</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.spotright.polidoro.testing" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="testing"></a>
+      <a id="testing:testing"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="testing/package.html"><span class="name">testing</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="com.spotright.polidoro.util" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="util"></a>
+      <a id="util:util"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="util/package.html"><span class="name">util</span></a>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>
