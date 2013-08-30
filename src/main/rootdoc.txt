@@ -1,0 +1,4 @@
+Polidoro - A light scala-sugar coating on Astyanax in the style of Cascal.
+
+@see [[com.spotright.polidoro]] for an overview.
+

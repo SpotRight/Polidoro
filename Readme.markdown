@@ -1,4 +1,3 @@
-<img align="right" src="coming_soon.png" alt="Coming Soon!" height="100" width="100"/>
 # Polidoro
 
 Polidoro was the son of Astyanax.
