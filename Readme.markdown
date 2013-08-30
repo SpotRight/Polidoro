@@ -11,6 +11,11 @@ in the style of [Cascal](https://github.com/shorrockin/cascal).
 * Simple data model with support for Composite columns
 * Direct access to Astyanax for complex tasks
 
+# API Docs
+
+* [Project site](http://spotright.github.io/Polidoro) via Maven.
+* [Scaladocs](http://spotright.github.io/Polidoro/project-reports.html)
+
 # Overview of Use
 
 To use Polidoro you create a class or classes that model your family
