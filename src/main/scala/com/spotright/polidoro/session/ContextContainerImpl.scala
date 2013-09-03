@@ -4,7 +4,7 @@ import scala.collection.JavaConverters._
 
 import com.spotright.polidoro.util.LogHelper
 
-class ContextContainerImpl(ccc: ContextContainerConfig) extends LogHelper {
+class ContextContainerImpl(ccc: ContextContainerConfig) extends ContextContainer with LogHelper {
 
   import com.netflix.astyanax.connectionpool.NodeDiscoveryType
   import com.netflix.astyanax.connectionpool.impl._
