@@ -37,7 +37,7 @@ object SpotAsty extends TestableCassConnector with BatchOps {
    * If the seed file does not exist Astyanax will be directed to connect to "127.0.0.1:9160".
    */
   val productionCassSeeds = {
-    val seedsFile = System.getProperty("cassandra.seeds.file", "/etc/spotinfluence/cassandra-seeds")
+    val seedsFile = System.getProperty("cassandra.seeds.file", "/etc/polidoro-seeds")
     try {
       val s = io.Source.fromFile(seedsFile)
       s.getLines().map{_.trim}.filterNot{line => line.startsWith("#") || line.isEmpty}.map{new Host(_, 9160)}.toSeq

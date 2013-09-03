@@ -19,41 +19,16 @@
 package com.spotright.polidoro
 package session
 
-import com.netflix.astyanax.connectionpool.{Host, NodeDiscoveryType}
-import com.netflix.astyanax.connectionpool.impl._
-import com.netflix.astyanax.impl.AstyanaxConfigurationImpl
-import com.netflix.astyanax.thrift.ThriftFamilyFactory
-import com.netflix.astyanax.{AstyanaxConfiguration, Cluster, AstyanaxContext}
+import com.netflix.astyanax.connectionpool.Host
+import com.netflix.astyanax.{Cluster, AstyanaxContext}
 
 /**
  * Connection context for Cass
  */
-class BasicAstyanaxContext(clusterName: String, seeds: Seq[Host], astyConfig: AstyanaxConfiguration = null)
+class BasicAstyanaxContext(clusterName: String, seeds: Seq[Host])
   extends ContextContainer with util.LogHelper {
 
-  logger.debug("Instantiating ContextContainer for cluster \"{}\"", clusterName)
-
-  lazy val context: AstyanaxContext[Cluster] = {
-    logger.debug("Building AstyanaxContext for cluster \"{}\"", clusterName)
-    new AstyanaxContext.Builder()
-      .forCluster(clusterName)
-      .withAstyanaxConfiguration(
-        if (astyConfig != null) astyConfig
-        else {
-          new AstyanaxConfigurationImpl()
-            .setCqlVersion("3.0.0")
-            .setTargetCassandraVersion("1.2")
-            .setDiscoveryType(NodeDiscoveryType.RING_DESCRIBE)
-            .setConnectionPoolType(ConnectionPoolType.TOKEN_AWARE)
-        }
-      )
-      .withConnectionPoolConfiguration {
-        val conf = new ConnectionPoolConfigurationImpl(clusterName)
-          .setMaxConns(20)
-          .setSeeds(seeds.map{_.getUrl}.mkString(","))
-        conf
-      }
-      .withConnectionPoolMonitor(new CountingConnectionPoolMonitor())
-      .buildCluster(ThriftFamilyFactory.getInstance())
-  }
+  lazy val context: AstyanaxContext[Cluster] = new ContextContainerImpl(
+    ContextContainerConfig(clusterName, seeds)
+  ).context
 }
