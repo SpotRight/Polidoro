@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>Insert - Polidoro 1.0.1 API - com.spotright.polidoro.model.Insert</title>
-          <meta name="description" content="Insert - Polidoro 1.0.1 API - com.spotright.polidoro.model.Insert" />
-          <meta name="keywords" content="Insert Polidoro 1.0.1 API com.spotright.polidoro.model.Insert" />
+          <title>ContextContainerConfig - Polidoro 1.0.1 API - com.spotright.polidoro.session.ContextContainerConfig</title>
+          <meta name="description" content="ContextContainerConfig - Polidoro 1.0.1 API - com.spotright.polidoro.session.ContextContainerConfig" />
+          <meta name="keywords" content="ContextContainerConfig Polidoro 1.0.1 API com.spotright.polidoro.session.ContextContainerConfig" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -17,7 +17,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../../index.html';
-            var hash = 'com.spotright.polidoro.model.Insert';
+            var hash = 'com.spotright.polidoro.session.ContextContainerConfig';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -30,8 +30,8 @@
         <body class="type">
       <div id="definition">
         <img src="../../../../lib/class_big.png" />
-        <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.spotright">spotright</a>.<a href="../package.html" class="extype" name="com.spotright.polidoro">polidoro</a>.<a href="package.html" class="extype" name="com.spotright.polidoro.model">model</a></p>
-        <h1>Insert</h1>
+        <p id="owner"><a href="../../../package.html" class="extype" name="com">com</a>.<a href="../../package.html" class="extype" name="com.spotright">spotright</a>.<a href="../package.html" class="extype" name="com.spotright.polidoro">polidoro</a>.<a href="package.html" class="extype" name="com.spotright.polidoro.session">session</a></p>
+        <h1>ContextContainerConfig</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -40,13 +40,15 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Insert</span><span class="tparams">[<span name="K">K</span>, <span name="N">N</span>, <span name="V">V</span>]</span><span class="params">(<span name="col">col: <a href="Column.html" class="extype" name="com.spotright.polidoro.model.Column">Column</a>[<span class="extype" name="com.spotright.polidoro.model.Insert.K">K</span>, <span class="extype" name="com.spotright.polidoro.model.Insert.N">N</span>, <span class="extype" name="com.spotright.polidoro.model.Insert.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence$1">evidence$1: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.spotright.polidoro.model.Insert.K">K</span>]</span>, <span name="evidence$2">evidence$2: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.spotright.polidoro.model.Insert.N">N</span>]</span>, <span name="evidence$3">evidence$3: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.spotright.polidoro.model.Insert.V">V</span>]</span>)</span><span class="result"> extends <a href="Operation.html" class="extype" name="com.spotright.polidoro.model.Operation">Operation</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">ContextContainerConfig</span><span class="params">(<span name="clusterName">clusterName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="seedHosts">seedHosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="com.netflix.astyanax.connectionpool.Host">Host</span>]</span>, <span name="defaultReadCL">defaultReadCL: <span class="extype" name="com.netflix.astyanax.model.ConsistencyLevel">ConsistencyLevel</span> = <span class="defval" name="com.netflix.astyanax.model.ConsistencyLevel.CL_QUORUM">...</span></span>, <span name="defaultWriteCL">defaultWriteCL: <span class="extype" name="com.netflix.astyanax.model.ConsistencyLevel">ConsistencyLevel</span> = <span class="defval" name="com.netflix.astyanax.model.ConsistencyLevel.CL_QUORUM">...</span></span>, <span name="configDecorator">configDecorator: (<span class="extype" name="com.netflix.astyanax.AstyanaxConfiguration">AstyanaxConfiguration</span>) ⇒ <span class="extype" name="com.netflix.astyanax.AstyanaxConfiguration">AstyanaxConfiguration</span> = <span class="defval" name="{<br/>&amp;nbsp;&amp;nbsp;  ((x: com.netflix.astyanax.AstyanaxConfiguration) =&gt; scala.this.Predef.identity[com.netflix.astyanax.AstyanaxConfiguration](x))<br/>&amp;nbsp;&amp;nbsp;}">...</span></span>, <span name="connectionPoolDecorator">connectionPoolDecorator: (<span class="extype" name="com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration">ConnectionPoolConfiguration</span>) ⇒ <span class="extype" name="com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration">ConnectionPoolConfiguration</span> = <span class="defval" name="{<br/>&amp;nbsp;&amp;nbsp;  ((x: com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration) =&gt; scala.this.Predef.identity[com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration](x))<br/>&amp;nbsp;&amp;nbsp;}">...</span></span>, <span name="connectionPoolMonitor">connectionPoolMonitor: () ⇒ <span class="extype" name="com.netflix.astyanax.connectionpool.ConnectionPoolMonitor">ConnectionPoolMonitor</span> = <span class="defval" name="(() =&gt; new com.netflix.astyanax.connectionpool.impl.CountingConnectionPoolMonitor())">...</span></span>, <span name="typeFactory">typeFactory: () ⇒ <span class="extype" name="com.netflix.astyanax.AstyanaxTypeFactory">AstyanaxTypeFactory</span>[<span class="extype" name="org.apache.cassandra.thrift.Cassandra.Client">Client</span>] = <span class="defval" name="(() =&gt; com.netflix.astyanax.thrift.ThriftFamilyFactory.getInstance())">...</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Configuration information for a <a href="ContextContainerImpl.html" class="extype" name="com.spotright.polidoro.session.ContextContainerImpl">com.spotright.polidoro.session.ContextContainerImpl</a>
+</p></div><dl class="paramcmts block"><dt class="param">clusterName</dt><dd class="cmt"><p>The name of the cluster</p></dd><dt class="param">seedHosts</dt><dd class="cmt"><p>Hosts used to fetch ring information</p></dd><dt class="param">defaultReadCL</dt><dd class="cmt"><p>The default ConsistencyLevel for reads</p></dd><dt class="param">defaultWriteCL</dt><dd class="cmt"><p>The default ConsitencyLevel for writes</p></dd><dt class="param">configDecorator</dt><dd class="cmt"><p>A function which can modify the AstyanaxConfiguration used to construct the AstytanaxContext</p></dd><dt class="param">connectionPoolDecorator</dt><dd class="cmt"><p>A function which can modify the ConnectionPoolConfiguration used to construct the AstytanaxContext</p></dd><dt class="param">connectionPoolMonitor</dt><dd class="cmt"><p>A factory for an instance of the ConnectionPoolMonitor used to construct the AstytanaxContext</p></dd><dt class="param">typeFactory</dt><dd class="cmt"><p>A factory for an instance of the AstyanaxTypeFactory used to construct the AstyanaxContext
+</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="Operation.html" class="extype" name="com.spotright.polidoro.model.Operation">Operation</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -64,7 +66,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="com.spotright.polidoro.model.Insert"><span>Insert</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="com.spotright.polidoro.model.Operation"><span>Operation</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="com.spotright.polidoro.session.ContextContainerConfig"><span>ContextContainerConfig</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -84,52 +86,24 @@
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="com.spotright.polidoro.model.Insert#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(col:com.spotright.polidoro.model.Column[K,N,V])(implicitevidence$1:Manifest[K],implicitevidence$2:Manifest[N],implicitevidence$3:Manifest[V]):com.spotright.polidoro.model.Insert[K,N,V]"></a>
-      <a id="&lt;init&gt;:Insert[K,N,V]"></a>
+              <ol><li name="com.spotright.polidoro.session.ContextContainerConfig#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(clusterName:String,seedHosts:Seq[com.netflix.astyanax.connectionpool.Host],defaultReadCL:com.netflix.astyanax.model.ConsistencyLevel,defaultWriteCL:com.netflix.astyanax.model.ConsistencyLevel,configDecorator:com.netflix.astyanax.AstyanaxConfiguration=&gt;com.netflix.astyanax.AstyanaxConfiguration,connectionPoolDecorator:com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration=&gt;com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration,connectionPoolMonitor:()=&gt;com.netflix.astyanax.connectionpool.ConnectionPoolMonitor,typeFactory:()=&gt;com.netflix.astyanax.AstyanaxTypeFactory[org.apache.cassandra.thrift.Cassandra.Client]):com.spotright.polidoro.session.ContextContainerConfig"></a>
+      <a id="&lt;init&gt;:ContextContainerConfig"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Insert</span><span class="params">(<span name="col">col: <a href="Column.html" class="extype" name="com.spotright.polidoro.model.Column">Column</a>[<span class="extype" name="com.spotright.polidoro.model.Insert.K">K</span>, <span class="extype" name="com.spotright.polidoro.model.Insert.N">N</span>, <span class="extype" name="com.spotright.polidoro.model.Insert.V">V</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.spotright.polidoro.model.Insert.K">K</span>]</span>, <span name="arg1">arg1: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.spotright.polidoro.model.Insert.N">N</span>]</span>, <span name="arg2">arg2: <span class="extype" name="scala.Predef.Manifest">Manifest</span>[<span class="extype" name="com.spotright.polidoro.model.Insert.V">V</span>]</span>)</span>
+        <span class="name">ContextContainerConfig</span><span class="params">(<span name="clusterName">clusterName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="seedHosts">seedHosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="com.netflix.astyanax.connectionpool.Host">Host</span>]</span>, <span name="defaultReadCL">defaultReadCL: <span class="extype" name="com.netflix.astyanax.model.ConsistencyLevel">ConsistencyLevel</span> = <span class="defval" name="com.netflix.astyanax.model.ConsistencyLevel.CL_QUORUM">...</span></span>, <span name="defaultWriteCL">defaultWriteCL: <span class="extype" name="com.netflix.astyanax.model.ConsistencyLevel">ConsistencyLevel</span> = <span class="defval" name="com.netflix.astyanax.model.ConsistencyLevel.CL_QUORUM">...</span></span>, <span name="configDecorator">configDecorator: (<span class="extype" name="com.netflix.astyanax.AstyanaxConfiguration">AstyanaxConfiguration</span>) ⇒ <span class="extype" name="com.netflix.astyanax.AstyanaxConfiguration">AstyanaxConfiguration</span> = <span class="defval" name="{<br/>&amp;nbsp;&amp;nbsp;  ((x: com.netflix.astyanax.AstyanaxConfiguration) =&gt; scala.this.Predef.identity[com.netflix.astyanax.AstyanaxConfiguration](x))<br/>&amp;nbsp;&amp;nbsp;}">...</span></span>, <span name="connectionPoolDecorator">connectionPoolDecorator: (<span class="extype" name="com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration">ConnectionPoolConfiguration</span>) ⇒ <span class="extype" name="com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration">ConnectionPoolConfiguration</span> = <span class="defval" name="{<br/>&amp;nbsp;&amp;nbsp;  ((x: com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration) =&gt; scala.this.Predef.identity[com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration](x))<br/>&amp;nbsp;&amp;nbsp;}">...</span></span>, <span name="connectionPoolMonitor">connectionPoolMonitor: () ⇒ <span class="extype" name="com.netflix.astyanax.connectionpool.ConnectionPoolMonitor">ConnectionPoolMonitor</span> = <span class="defval" name="(() =&gt; new com.netflix.astyanax.connectionpool.impl.CountingConnectionPoolMonitor())">...</span></span>, <span name="typeFactory">typeFactory: () ⇒ <span class="extype" name="com.netflix.astyanax.AstyanaxTypeFactory">AstyanaxTypeFactory</span>[<span class="extype" name="org.apache.cassandra.thrift.Cassandra.Client">Client</span>] = <span class="defval" name="(() =&gt; com.netflix.astyanax.thrift.ThriftFamilyFactory.getInstance())">...</span></span>)</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">clusterName</dt><dd class="cmt"><p>The name of the cluster</p></dd><dt class="param">seedHosts</dt><dd class="cmt"><p>Hosts used to fetch ring information</p></dd><dt class="param">defaultReadCL</dt><dd class="cmt"><p>The default ConsistencyLevel for reads</p></dd><dt class="param">defaultWriteCL</dt><dd class="cmt"><p>The default ConsitencyLevel for writes</p></dd><dt class="param">configDecorator</dt><dd class="cmt"><p>A function which can modify the AstyanaxConfiguration used to construct the AstytanaxContext</p></dd><dt class="param">connectionPoolDecorator</dt><dd class="cmt"><p>A function which can modify the ConnectionPoolConfiguration used to construct the AstytanaxContext</p></dd><dt class="param">connectionPoolMonitor</dt><dd class="cmt"><p>A factory for an instance of the ConnectionPoolMonitor used to construct the AstytanaxContext</p></dd><dt class="param">typeFactory</dt><dd class="cmt"><p>A factory for an instance of the AstyanaxTypeFactory used to construct the AstyanaxContext
+</p></dd></dl></div>
     </li></ol>
             </div>
 
-        <div id="types" class="types members">
-              <h3>Type Members</h3>
-              <ol><li name="com.spotright.polidoro.model.Insert.Ktype" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Ktype=K"></a>
-      <a id="Ktype:Ktype"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Ktype</span><span class="result"> = <span class="extype" name="com.spotright.polidoro.model.Insert.K">K</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.spotright.polidoro.model.Insert">Insert</a> → <a href="Operation.html" class="extype" name="com.spotright.polidoro.model.Operation">Operation</a></dd></dl></div>
-    </li><li name="com.spotright.polidoro.model.Insert.Ntype" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Ntype=N"></a>
-      <a id="Ntype:Ntype"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Ntype</span><span class="result"> = <span class="extype" name="com.spotright.polidoro.model.Insert.N">N</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.spotright.polidoro.model.Insert">Insert</a> → <a href="Operation.html" class="extype" name="com.spotright.polidoro.model.Operation">Operation</a></dd></dl></div>
-    </li></ol>
-            </div>
+        
 
         
 
@@ -213,19 +187,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.spotright.polidoro.model.Operation#cfname" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="cfname:String"></a>
-      <a id="cfname:String"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cfname</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Operation.html" class="extype" name="com.spotright.polidoro.model.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -242,19 +203,84 @@
                 <span class="name">@throws</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="com.spotright.polidoro.model.Insert#col" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="col:com.spotright.polidoro.model.Column[K,N,V]"></a>
-      <a id="col:Column[K,N,V]"></a>
+    </li><li name="com.spotright.polidoro.session.ContextContainerConfig#clusterName" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="clusterName:String"></a>
+      <a id="clusterName:String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">col</span><span class="result">: <a href="Column.html" class="extype" name="com.spotright.polidoro.model.Column">Column</a>[<span class="extype" name="com.spotright.polidoro.model.Insert.K">K</span>, <span class="extype" name="com.spotright.polidoro.model.Insert.N">N</span>, <span class="extype" name="com.spotright.polidoro.model.Insert.V">V</span>]</span>
+        <span class="name">clusterName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">The name of the cluster</p>
+    </li><li name="com.spotright.polidoro.session.ContextContainerConfig#configDecorator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="configDecorator:com.netflix.astyanax.AstyanaxConfiguration=&gt;com.netflix.astyanax.AstyanaxConfiguration"></a>
+      <a id="configDecorator:(AstyanaxConfiguration)⇒AstyanaxConfiguration"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">configDecorator</span><span class="result">: (<span class="extype" name="com.netflix.astyanax.AstyanaxConfiguration">AstyanaxConfiguration</span>) ⇒ <span class="extype" name="com.netflix.astyanax.AstyanaxConfiguration">AstyanaxConfiguration</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A function which can modify the AstyanaxConfiguration used to construct the AstytanaxContext</p>
+    </li><li name="com.spotright.polidoro.session.ContextContainerConfig#connectionPoolDecorator" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="connectionPoolDecorator:com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration=&gt;com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration"></a>
+      <a id="connectionPoolDecorator:(ConnectionPoolConfiguration)⇒ConnectionPoolConfiguration"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">connectionPoolDecorator</span><span class="result">: (<span class="extype" name="com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration">ConnectionPoolConfiguration</span>) ⇒ <span class="extype" name="com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration">ConnectionPoolConfiguration</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A function which can modify the ConnectionPoolConfiguration used to construct the AstytanaxContext</p>
+    </li><li name="com.spotright.polidoro.session.ContextContainerConfig#connectionPoolMonitor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="connectionPoolMonitor:()=&gt;com.netflix.astyanax.connectionpool.ConnectionPoolMonitor"></a>
+      <a id="connectionPoolMonitor:()⇒ConnectionPoolMonitor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">connectionPoolMonitor</span><span class="result">: () ⇒ <span class="extype" name="com.netflix.astyanax.connectionpool.ConnectionPoolMonitor">ConnectionPoolMonitor</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">A factory for an instance of the ConnectionPoolMonitor used to construct the AstytanaxContext</p>
+    </li><li name="com.spotright.polidoro.session.ContextContainerConfig#defaultReadCL" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="defaultReadCL:com.netflix.astyanax.model.ConsistencyLevel"></a>
+      <a id="defaultReadCL:ConsistencyLevel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">defaultReadCL</span><span class="result">: <span class="extype" name="com.netflix.astyanax.model.ConsistencyLevel">ConsistencyLevel</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The default ConsistencyLevel for reads</p>
+    </li><li name="com.spotright.polidoro.session.ContextContainerConfig#defaultWriteCL" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="defaultWriteCL:com.netflix.astyanax.model.ConsistencyLevel"></a>
+      <a id="defaultWriteCL:ConsistencyLevel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">defaultWriteCL</span><span class="result">: <span class="extype" name="com.netflix.astyanax.model.ConsistencyLevel">ConsistencyLevel</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">The default ConsitencyLevel for writes</p>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -310,45 +336,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="com.spotright.polidoro.model.Insert#keySD" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="keySD:com.netflix.astyanax.serializers.AbstractSerializer[K]"></a>
-      <a id="keySD:AbstractSerializer[K]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">keySD</span><span class="result">: <span class="extype" name="com.netflix.astyanax.serializers.AbstractSerializer">AbstractSerializer</span>[<span class="extype" name="com.spotright.polidoro.model.Insert.K">K</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.spotright.polidoro.model.Insert">Insert</a> → <a href="Operation.html" class="extype" name="com.spotright.polidoro.model.Operation">Operation</a></dd></dl></div>
-    </li><li name="com.spotright.polidoro.model.Operation#keyspace" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="keyspace:com.netflix.astyanax.Keyspace"></a>
-      <a id="keyspace:Keyspace"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">keyspace</span><span class="result">: <span class="extype" name="com.netflix.astyanax.Keyspace">Keyspace</span></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Operation.html" class="extype" name="com.spotright.polidoro.model.Operation">Operation</a></dd></dl></div>
-    </li><li name="com.spotright.polidoro.model.Insert#nameSD" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="nameSD:com.netflix.astyanax.serializers.AbstractSerializer[N]"></a>
-      <a id="nameSD:AbstractSerializer[N]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">nameSD</span><span class="result">: <span class="extype" name="com.netflix.astyanax.serializers.AbstractSerializer">AbstractSerializer</span>[<span class="extype" name="com.spotright.polidoro.model.Insert.N">N</span>]</span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.spotright.polidoro.model.Insert">Insert</a> → <a href="Operation.html" class="extype" name="com.spotright.polidoro.model.Operation">Operation</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -388,32 +375,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.spotright.polidoro.model.Operation#rowkey" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="rowkey:Operation.this.Ktype"></a>
-      <a id="rowkey:Ktype"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">rowkey</span><span class="result">: <a href="#Ktype=K" class="extmbr" name="com.spotright.polidoro.model.Insert.Ktype">Ktype</a></span>
-      </span>
-      </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Operation.html" class="extype" name="com.spotright.polidoro.model.Operation">Operation</a></dd></dl></div>
-    </li><li name="com.spotright.polidoro.model.Insert#rpath" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="rpath:com.spotright.polidoro.model.RowPathish[Insert.this.Ktype]"></a>
-      <a id="rpath:RowPathish[Ktype]"></a>
+    </li><li name="com.spotright.polidoro.session.ContextContainerConfig#seedHosts" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="seedHosts:Seq[com.netflix.astyanax.connectionpool.Host]"></a>
+      <a id="seedHosts:Seq[Host]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">rpath</span><span class="result">: <a href="package.html#RowPathish[K]=com.spotright.polidoro.modelish.RowPathish[K]" class="extmbr" name="com.spotright.polidoro.model.RowPathish">RowPathish</a>[<a href="#Ktype=K" class="extmbr" name="com.spotright.polidoro.model.Insert.Ktype">Ktype</a>]</span>
+        <span class="name">seedHosts</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="com.netflix.astyanax.connectionpool.Host">Host</span>]</span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.spotright.polidoro.model.Insert">Insert</a> → <a href="Operation.html" class="extype" name="com.spotright.polidoro.model.Operation">Operation</a></dd></dl></div>
+      <p class="shortcomment cmt">Hosts used to fetch ring information</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -427,19 +401,20 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="com.spotright.polidoro.model.Insert#valSD" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="valSD:com.netflix.astyanax.serializers.AbstractSerializer[V]"></a>
-      <a id="valSD:AbstractSerializer[V]"></a>
+    </li><li name="com.spotright.polidoro.session.ContextContainerConfig#typeFactory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="typeFactory:()=&gt;com.netflix.astyanax.AstyanaxTypeFactory[org.apache.cassandra.thrift.Cassandra.Client]"></a>
+      <a id="typeFactory:()⇒AstyanaxTypeFactory[Client]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">valSD</span><span class="result">: <span class="extype" name="com.netflix.astyanax.serializers.AbstractSerializer">AbstractSerializer</span>[<span class="extype" name="com.spotright.polidoro.model.Insert.V">V</span>]</span>
+        <span class="name">typeFactory</span><span class="result">: () ⇒ <span class="extype" name="com.netflix.astyanax.AstyanaxTypeFactory">AstyanaxTypeFactory</span>[<span class="extype" name="org.apache.cassandra.thrift.Cassandra.Client">Client</span>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">A factory for an instance of the AstyanaxTypeFactory used to construct the AstyanaxContext
+</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <a id="wait():Unit"></a>
@@ -505,8 +480,6 @@
               <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
-            </div><div class="parent" name="com.spotright.polidoro.model.Operation">
-              <h3>Inherited from <a href="Operation.html" class="extype" name="com.spotright.polidoro.model.Operation">Operation</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

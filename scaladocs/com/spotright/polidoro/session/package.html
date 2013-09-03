@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>session - Polidoro 1.0.0 API - com.spotright.polidoro.session</title>
-          <meta name="description" content="session - Polidoro 1.0.0 API - com.spotright.polidoro.session" />
-          <meta name="keywords" content="session Polidoro 1.0.0 API com.spotright.polidoro.session" />
+          <title>session - Polidoro 1.0.1 API - com.spotright.polidoro.session</title>
+          <meta name="description" content="session - Polidoro 1.0.1 API - com.spotright.polidoro.session" />
+          <meta name="keywords" content="session Polidoro 1.0.1 API com.spotright.polidoro.session" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -126,6 +126,33 @@
       </span>
       <span class="symbol">
         <a href="ContextContainer.html"><span class="name">ContextContainer</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="com.spotright.polidoro.session.ContextContainerConfig" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContextContainerConfigextendsProductwithSerializable"></a>
+      <a id="ContextContainerConfig:ContextContainerConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ContextContainerConfig.html"><span class="name">ContextContainerConfig</span></a><span class="params">(<span name="clusterName">clusterName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="seedHosts">seedHosts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="com.netflix.astyanax.connectionpool.Host">Host</span>]</span>, <span name="defaultReadCL">defaultReadCL: <span class="extype" name="com.netflix.astyanax.model.ConsistencyLevel">ConsistencyLevel</span> = <span class="defval" name="com.netflix.astyanax.model.ConsistencyLevel.CL_QUORUM">...</span></span>, <span name="defaultWriteCL">defaultWriteCL: <span class="extype" name="com.netflix.astyanax.model.ConsistencyLevel">ConsistencyLevel</span> = <span class="defval" name="com.netflix.astyanax.model.ConsistencyLevel.CL_QUORUM">...</span></span>, <span name="configDecorator">configDecorator: (<span class="extype" name="com.netflix.astyanax.AstyanaxConfiguration">AstyanaxConfiguration</span>) ⇒ <span class="extype" name="com.netflix.astyanax.AstyanaxConfiguration">AstyanaxConfiguration</span> = <span class="defval" name="{<br/>&amp;nbsp;&amp;nbsp;  ((x: com.netflix.astyanax.AstyanaxConfiguration) =&gt; scala.this.Predef.identity[com.netflix.astyanax.AstyanaxConfiguration](x))<br/>&amp;nbsp;&amp;nbsp;}">...</span></span>, <span name="connectionPoolDecorator">connectionPoolDecorator: (<span class="extype" name="com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration">ConnectionPoolConfiguration</span>) ⇒ <span class="extype" name="com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration">ConnectionPoolConfiguration</span> = <span class="defval" name="{<br/>&amp;nbsp;&amp;nbsp;  ((x: com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration) =&gt; scala.this.Predef.identity[com.netflix.astyanax.connectionpool.ConnectionPoolConfiguration](x))<br/>&amp;nbsp;&amp;nbsp;}">...</span></span>, <span name="connectionPoolMonitor">connectionPoolMonitor: () ⇒ <span class="extype" name="com.netflix.astyanax.connectionpool.ConnectionPoolMonitor">ConnectionPoolMonitor</span> = <span class="defval" name="(() =&gt; new com.netflix.astyanax.connectionpool.impl.CountingConnectionPoolMonitor())">...</span></span>, <span name="typeFactory">typeFactory: () ⇒ <span class="extype" name="com.netflix.astyanax.AstyanaxTypeFactory">AstyanaxTypeFactory</span>[<span class="extype" name="org.apache.cassandra.thrift.Cassandra.Client">Client</span>] = <span class="defval" name="(() =&gt; com.netflix.astyanax.thrift.ThriftFamilyFactory.getInstance())">...</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">Configuration information for a <a href="ContextContainerImpl.html" class="extype" name="com.spotright.polidoro.session.ContextContainerImpl">com.spotright.polidoro.session.ContextContainerImpl</a>
+</p>
+    </li><li name="com.spotright.polidoro.session.ContextContainerImpl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ContextContainerImplextendsLogHelper"></a>
+      <a id="ContextContainerImpl:ContextContainerImpl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ContextContainerImpl.html"><span class="name">ContextContainerImpl</span></a><span class="result"> extends <a href="../util/LogHelper.html" class="extype" name="com.spotright.polidoro.util.LogHelper">LogHelper</a></span>
       </span>
       </h4>
       
