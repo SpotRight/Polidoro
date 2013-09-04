@@ -52,13 +52,14 @@ object Cass extends TestableCassConnector with BatchOps {
   // In production you would probably load your seeds from a config file.
   val cass_seeds = List(new Host("localhost", 9160))
 
-  protected var proxy: ContextContainer = new BasicAstyanaxContext("Demonstration", cass_seeds)
+  protected var proxy: ContextContainer = new ContextContainerImpl(ContextContainerConfig("Demonstration", cass_seeds))
   protected val clusterLoader: ClusterLoader = DemoLoader
 
   object DemoFG extends DemoCFs(cluster)
 }
 
 // For this demo we want to create the Cluster and Keyspaces.
+// Note that we'll also start an EmbeddedCassandra and not end up using the seeds above.
 val _ = Cass.specTestInit()
 println(s"Cass running on port: ${Cass.testPort}")
 

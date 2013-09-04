@@ -48,7 +48,7 @@ object SpotAsty extends TestableCassConnector with BatchOps {
     }
   }
 
-  protected var proxy: ContextContainer = new BasicAstyanaxContext("Production", productionCassSeeds)
+  protected var proxy: ContextContainer = new ContextContainerImpl(ContextContainerConfig("Production", productionCassSeeds))
   protected val clusterLoader: ClusterLoader = DemoClusterLoader
 
   // If you create a family in families be sure and create the

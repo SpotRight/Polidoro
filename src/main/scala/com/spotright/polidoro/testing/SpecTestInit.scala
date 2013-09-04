@@ -20,8 +20,9 @@ package com.spotright.polidoro
 package testing
 
 import com.netflix.astyanax.connectionpool.Host
+import com.netflix.astyanax.model.ConsistencyLevel
 
-import com.spotright.polidoro.session.{CassConnectorProxy, BasicAstyanaxContext}
+import com.spotright.polidoro.session.{ContextContainerImpl, ContextContainerConfig, CassConnectorProxy}
 
 trait SpecTestInit extends util.LogHelper {
   self: CassConnectorProxy =>
@@ -29,6 +30,14 @@ trait SpecTestInit extends util.LogHelper {
   protected val clusterLoader: ClusterLoader
 
   private var embed: EmbeddedCass = _
+
+  protected val contextContainerConfig =
+    ContextContainerConfig(
+      clusterName = "Testing",
+      seedHosts = List(new Host("localhost", 9160)),
+      defaultReadCL = ConsistencyLevel.CL_ONE,
+      defaultWriteCL = ConsistencyLevel.CL_ONE
+    )
 
   /**
    * Initialize and proxy EmbeddedTestCassandra in this object.
@@ -43,13 +52,14 @@ trait SpecTestInit extends util.LogHelper {
                     basedir: String = "target/cassandra.home",
                     subdir: String = "default",
                     yamlFile: String = "/cassandra.yaml",
-                    sourceDir: String = ""): () => Unit = {
+                    sourceDir: String = "",
+                    ccc: ContextContainerConfig = contextContainerConfig): () => Unit = {
     if (embed == null) {
       embed = new EmbeddedCass(basedir, subdir, yamlFile, sourceDir)
       embed.start()
     }
 
-    proxy = new BasicAstyanaxContext("Development", List(new Host("localhost", embed.port.get)))
+    proxy = new ContextContainerImpl(ccc.copy(seedHosts = List(new Host("localhost", testPort().get))))
     clusterLoader.load(cluster)
 
     () => specTestShutdown()
