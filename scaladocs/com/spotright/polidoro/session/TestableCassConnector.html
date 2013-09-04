@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>TestableCassConnector - Polidoro 1.0.1 API - com.spotright.polidoro.session.TestableCassConnector</title>
-          <meta name="description" content="TestableCassConnector - Polidoro 1.0.1 API - com.spotright.polidoro.session.TestableCassConnector" />
-          <meta name="keywords" content="TestableCassConnector Polidoro 1.0.1 API com.spotright.polidoro.session.TestableCassConnector" />
+          <title>TestableCassConnector - Polidoro 1.0.2 API - com.spotright.polidoro.session.TestableCassConnector</title>
+          <meta name="description" content="TestableCassConnector - Polidoro 1.0.2 API - com.spotright.polidoro.session.TestableCassConnector" />
+          <meta name="keywords" content="TestableCassConnector Polidoro 1.0.2 API com.spotright.polidoro.session.TestableCassConnector" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -252,6 +252,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CassConnectorProxy.html" class="extype" name="com.spotright.polidoro.session.CassConnectorProxy">CassConnectorProxy</a> → <a href="ContextContainer.html" class="extype" name="com.spotright.polidoro.session.ContextContainer">ContextContainer</a></dd></dl></div>
+    </li><li name="com.spotright.polidoro.testing.SpecTestInit#contextContainerConfig" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="contextContainerConfig:com.spotright.polidoro.session.ContextContainerConfig"></a>
+      <a id="contextContainerConfig:ContextContainerConfig"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">contextContainerConfig</span><span class="result">: <a href="ContextContainerConfig.html" class="extype" name="com.spotright.polidoro.session.ContextContainerConfig">ContextContainerConfig</a></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../testing/SpecTestInit.html" class="extype" name="com.spotright.polidoro.testing.SpecTestInit">SpecTestInit</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -386,15 +399,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="com.spotright.polidoro.testing.SpecTestInit#specTestInit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="specTestInit(basedir:String,subdir:String,yamlFile:String,sourceDir:String):()=&gt;Unit"></a>
-      <a id="specTestInit(String,String,String,String):()⇒Unit"></a>
+      <a id="specTestInit(basedir:String,subdir:String,yamlFile:String,sourceDir:String,ccc:com.spotright.polidoro.session.ContextContainerConfig):()=&gt;Unit"></a>
+      <a id="specTestInit(String,String,String,String,ContextContainerConfig):()⇒Unit"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">specTestInit</span><span class="params">(<span name="basedir">basedir: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;target/cassandra.home&quot;</span></span>, <span name="subdir">subdir: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;default&quot;</span></span>, <span name="yamlFile">yamlFile: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;/cassandra.yaml&quot;</span></span>, <span name="sourceDir">sourceDir: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result">: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">specTestInit</span><span class="params">(<span name="basedir">basedir: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;target/cassandra.home&quot;</span></span>, <span name="subdir">subdir: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;default&quot;</span></span>, <span name="yamlFile">yamlFile: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;/cassandra.yaml&quot;</span></span>, <span name="sourceDir">sourceDir: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="ccc">ccc: <a href="ContextContainerConfig.html" class="extype" name="com.spotright.polidoro.session.ContextContainerConfig">ContextContainerConfig</a> = <span class="symbol"><span class="name"><a href="../testing/SpecTestInit.html#contextContainerConfig:com.spotright.polidoro.session.ContextContainerConfig">contextContainerConfig</a></span></span></span>)</span><span class="result">: () ⇒ <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Initialize and proxy EmbeddedTestCassandra in this object.</p><div class="fullcomment"><div class="comment cmt"><p>Initialize and proxy EmbeddedTestCassandra in this object.</p><p>This is a thin wrapper to initializing cascal.testing.EmbeddedTestCassandra.  Mainly this allows
