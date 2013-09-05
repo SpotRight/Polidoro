@@ -25,7 +25,7 @@ object Demonstration extends KeyspaceLoader {
 
   import ComparatorType._
 
-  final val keyspaceName = "Demonstration"
+  val keyspaceName = "Demonstration"
 
   cdefs += ColumnFamilyDef("Users", keyType = UTF8TYPE.tyn, nameType = UTF8TYPE.tyn)
 
