@@ -22,8 +22,9 @@ object CompStr2 {
   def unapply(in: CompStr2): Option[(String,String)] = Some((in.c1, in.c2))
 
   def unapply(in: ByteBuffer): Option[(String,String)] = {
-    val cs2 = serdes.fromByteBuffer(in.duplicate())
-    Some((cs2.c1, cs2.c2))
+    def nonull(s: String) = if (s == null) "" else s
+    val CompStr2(c1, c2) = serdes.fromByteBuffer(in.duplicate())
+    Some((nonull(c1), nonull(c2)))
   }
 
   val serdes = new AnnotatedCompositeSerializer[CompStr2](classOf[CompStr2])
