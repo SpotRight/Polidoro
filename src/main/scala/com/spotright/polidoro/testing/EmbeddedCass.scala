@@ -113,7 +113,7 @@ class EmbeddedCass(
   def shutdown() {
     if (cassandraDaemon != null) {
       cassandraDaemon.deactivate()
-      cassandraDaemon == null
+      cassandraDaemon = null
 
       executor.shutdown()
       executor.shutdownNow()

@@ -29,6 +29,7 @@ trait SpecTestInit extends util.LogHelper {
 
   protected val clusterLoader: ClusterLoader
 
+  @volatile
   private var embed: EmbeddedCass = _
 
   protected val contextContainerConfig =
@@ -68,8 +69,10 @@ trait SpecTestInit extends util.LogHelper {
   def specTestShutdown() {
     context.shutdown()
 
-    if (embed != null)
+    if (embed != null) {
       embed.shutdown()
+      embed = null
+    }
   }
 
   def testPort(): Option[Int] = embed.port
