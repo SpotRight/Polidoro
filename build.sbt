@@ -1,3 +1,7 @@
+// Demonstrate tests that don't seem to fork.
+//   sbt test     // fails
+//   sbt "testOnly com.spotright.polidoro.TestGet" "testOnly com.spotright.polidoro.TestEg"    // succeeds
+
 name := "Polidoro"
 
 organization := "com.spotright"
